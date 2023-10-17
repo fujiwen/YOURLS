@@ -46,6 +46,5 @@ RUN set -eux; \
 
 COPY --chown=www-data:www-data config-docker.php /usr/src/yourls/user/
 COPY docker-entrypoint.sh /usr/local/bin/
-COPY .htaccess /usr/src/yourls/
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
